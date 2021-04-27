@@ -34,7 +34,20 @@ struct ContentView: View {
         }))
     }
     .sheet(isPresented: $showScanner, content: {
-        Text("Scan")
+        ScannerView { result in
+            switch result {
+            case .success(let scannedPages):
+                break
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+            
+            showScanner = false
+            
+        } didCancelScanning: {
+            showScanner = false
+        }
     })
     }
 }
