@@ -8,9 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showScanner = false
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            Text("Hello, world!")
+                .padding()
+        
+        
+        
+        .navigationTitle("Scaner")
+        .navigationBarItems(trailing: Button(action: {
+            showScanner = true
+        }, label: {
+            HStack {
+                Image(systemName: "doc.text.viewfinder")
+                    .renderingMode(.template)
+                    .foregroundColor(.white)
+                Text("Scan")
+                    .foregroundColor(.white)
+            }
+            .padding(.horizontal, 16)
+            .frame(height: 36)
+            .background(Color(UIColor.systemIndigo))
+            .cornerRadius(18)
+        }))
+    }
+    .sheet(isPresented: $showScanner, content: {
+        Text("Scan")
+    })
     }
 }
 
