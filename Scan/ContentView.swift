@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var recognizedContent = RecognizedContent()
     @State private var showScanner = false
     var body: some View {
         NavigationView {
