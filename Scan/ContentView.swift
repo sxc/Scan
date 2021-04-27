@@ -10,10 +10,13 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var recognizedContent = RecognizedContent()
     @State private var showScanner = false
+    @State private var isRecognizing = false
     var body: some View {
         NavigationView {
-            Text("Hello, world!")
-                .padding()
+            List(recognizedContent.items, id: \.id) { textItem in
+                Text(String(textItem.text.prefix(50)).appending("..."))
+                
+            }
         
         
         
@@ -37,8 +40,13 @@ struct ContentView: View {
     .sheet(isPresented: $showScanner, content: {
         ScannerView { result in
             switch result {
-            case .success(let scannedPages):
-                break
+            case .success(let scannedImages):
+                isRecognizing = true
+                TextRecognition(scannedImges: scannedImages, recognizedContent: recognizedContent) {
+                    
+                    isRecognizing = false
+                }
+                .recognizedText()
                 
             case .failure(let error):
                 print(error.localizedDescription)
