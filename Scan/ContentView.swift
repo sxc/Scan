@@ -14,7 +14,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(recognizedContent.items, id: \.id) { textItem in
-                Text(String(textItem.text.prefix(50)).appending("..."))
+                NavigationLink(destination: TextPreviewView(text: textItem.text)) {
+                    Text(String(textItem.text.prefix(50)).appending("..."))
+                }
                 
             }
         

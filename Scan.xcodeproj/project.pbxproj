@@ -14,6 +14,7 @@
 		34A8B3332637BDD700A75996 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8B3322637BDD700A75996 /* ScannerView.swift */; };
 		34A8B3352637DBB100A75996 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8B3342637DBB100A75996 /* Model.swift */; };
 		34A8B3372637E3CD00A75996 /* TextRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8B3362637E3CD00A75996 /* TextRecognition.swift */; };
+		34A8B3392637EB0000A75996 /* TextPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8B3382637EB0000A75996 /* TextPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		34A8B3322637BDD700A75996 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		34A8B3342637DBB100A75996 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		34A8B3362637E3CD00A75996 /* TextRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognition.swift; sourceTree = "<group>"; };
+		34A8B3382637EB0000A75996 /* TextPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				34A8B3322637BDD700A75996 /* ScannerView.swift */,
 				34A8B3342637DBB100A75996 /* Model.swift */,
 				34A8B3362637E3CD00A75996 /* TextRecognition.swift */,
+				34A8B3382637EB0000A75996 /* TextPreviewView.swift */,
 			);
 			path = Scan;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				34A8B3372637E3CD00A75996 /* TextRecognition.swift in Sources */,
 				34A8B3262637B99500A75996 /* ContentView.swift in Sources */,
 				34A8B3242637B99500A75996 /* ScanApp.swift in Sources */,
+				34A8B3392637EB0000A75996 /* TextPreviewView.swift in Sources */,
 				34A8B3352637DBB100A75996 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
